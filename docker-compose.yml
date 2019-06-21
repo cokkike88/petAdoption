@@ -1,0 +1,11 @@
+version: '3.7'
+services: 
+  pet_shop:
+    container_name: pet_shop_frontEnd
+    build: .
+    volumes: 
+      - .:/web
+    restart: always
+    ports:
+      - "9000:9000"
+    command: npm run start
